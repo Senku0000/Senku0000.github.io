@@ -25,10 +25,18 @@
   }
   .skip-link:focus { top: 0; opacity: 1; }
 
-  .terminal__body, .nav__prompt, .stat-block__num, .eyebrow { 
+  /* الأكواد التي يجب أن تبقى في أقصى اليسار */
+  .terminal__body, .nav__prompt, .stat-block__num { 
     font-family: 'JetBrains Mono', monospace !important; 
     direction: ltr; 
     text-align: left; 
+  }
+
+  /* العناوين التقنية (مثل whoami) لتبدأ من اليمين مع النصوص العربية */
+  .eyebrow { 
+    font-family: 'JetBrains Mono', monospace !important; 
+    direction: ltr; 
+    text-align: right; 
   }
 
   .nav__links { text-align: right; }
@@ -81,7 +89,7 @@
 <section class="hero" id="home">
   <div class="hero__grid">
     <div class="hero__content">
-      <p class="eyebrow"><span dir="ltr">$ whoami</span></p>
+      <p class="eyebrow">$ whoami</p>
       <h1 class="hero__title">
         مرحباً، أنا <span class="text-accent">محسن</span>.<br>
         طالب تقنية معلومات<br>
@@ -94,6 +102,7 @@
         <a href="#projects" class="btn btn--primary">عرض مشاريعي</a>
         <a href="#about" class="btn btn--ghost">نبذة عني</a>
         <a href="#contact" class="btn btn--ghost">تواصل معي</a>
+        <a href="index.html" class="btn btn--ghost" style="color: var(--accent); font-weight: bold;">English</a>
         <a href="assets/cv/Mohsin-Al-Jaili-Ahmed-CV.pdf" class="btn btn--outline" download>تحميل السيرة الذاتية</a>
       </div>
       <div class="hero__stats">
@@ -125,7 +134,7 @@
 <!-- ================= ABOUT ================= -->
 <section class="section" id="about">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ cat about.md</span></p>
+    <p class="eyebrow">$ cat about.md</p>
     <h2 class="section__title">نبذة عني</h2>
     <div class="about__grid">
       <div class="about__photo" style="display: flex; justify-content: center;">
@@ -146,7 +155,7 @@
 <!-- ================= SKILLS ================= -->
 <section class="section section--alt" id="skills">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ cat skills.json</span></p>
+    <p class="eyebrow">$ cat skills.json</p>
     <h2 class="section__title">المهارات التقنية</h2>
     <div class="skills__grid">
       <div class="skill-card">
@@ -184,7 +193,7 @@
 <!-- ================= ACHIEVEMENTS ================= -->
 <section class="section" id="achievements">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ cat achievements.log</span></p>
+    <p class="eyebrow">$ cat achievements.log</p>
     <h2 class="section__title">الإنجازات</h2>
     <div class="stats__grid">
       <div class="stat-block" style="text-align: right; align-items: flex-start;">
@@ -209,7 +218,7 @@
 <!-- ================= CERTIFICATIONS ================= -->
 <section class="section section--alt" id="cybersecurity">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ ls certifications/</span></p>
+    <p class="eyebrow">$ ls certifications/</p>
     <h2 class="section__title">الشهادات والتعلم</h2>
     <ul class="cert-list">
       <li class="cert-row">
@@ -233,7 +242,7 @@
 <!-- ================= PROJECTS ================= -->
 <section class="section" id="projects">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ ls projects/</span></p>
+    <p class="eyebrow">$ ls projects/</p>
     <h2 class="section__title">أبرز المشاريع</h2>
     <div class="projects__grid">
       
@@ -288,7 +297,7 @@
 <!-- ================= EXPERIENCE ================= -->
 <section class="section section--alt" id="experience">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ cat timeline.log</span></p>
+    <p class="eyebrow">$ cat timeline.log</p>
     <h2 class="section__title">المسيرة التقنية</h2>
     <ol class="timeline">
       <li class="timeline__item">
@@ -322,7 +331,7 @@
 <!-- ================= EDUCATION ================= -->
 <section class="section" id="education">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ cat education.txt</span></p>
+    <p class="eyebrow">$ cat education.txt</p>
     <h2 class="section__title">التعليم</h2>
     <div class="education-card">
       <h3>جامعة السودان للعلوم والتكنولوجيا</h3>
@@ -335,7 +344,7 @@
 <!-- ================= CONTACT ================= -->
 <section class="section section--alt" id="contact">
   <div class="section__inner">
-    <p class="eyebrow"><span dir="ltr">$ ./contact.sh</span></p>
+    <p class="eyebrow">$ ./contact.sh</p>
     <h2 class="section__title">التواصل</h2>
     <p class="section__lede">متاح لفرص التدريب، العمل الحر، ووظائف الأمن السيبراني وتقنية المعلومات — لا تتردد في التواصل معي.</p>
 
@@ -386,4 +395,5 @@
 
 <script src="js/script.js"></script>
 </body>
-</html>
+               </html>
+  
