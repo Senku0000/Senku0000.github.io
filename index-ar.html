@@ -9,11 +9,11 @@
 <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- إضافة خط عربي أنيق (Tajawal) مع الخطوط الأجنبية -->
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<!-- تعديل بسيط لخطوط النسخة العربية -->
-  <style>
+
+<!-- إصلاحات التصميم المخصصة للغة العربية -->
+<style>
   /* تعديل الخطوط العامة */
   body, h1, h2, h3, p, a, span, label, input, textarea { 
     font-family: 'Tajawal', 'Inter', sans-serif !important; 
@@ -56,8 +56,19 @@
     justify-content: flex-start;
     gap: 15px;
   }
-  </style>
-  
+
+  /* إصلاح الخط الزمني (Timeline) ليظهر على اليمين بدلاً من اليسار */
+  .timeline__item {
+    padding-left: 0 !important;
+    padding-right: 1.5rem !important;
+    border-left: none !important;
+    border-right: 1px dashed var(--accent) !important;
+  }
+  .timeline__dot {
+    left: auto !important;
+    right: -6px !important;
+  }
+</style>
 </head>
 <body>
 
@@ -73,12 +84,10 @@
 <a href="#home" class="nav__link active">الرئيسية</a>
 <a href="#about" class="nav__link">نبذة عني</a>
 <a href="#skills" class="nav__link">المهارات</a>
-<a href="#cybersecurity" class="nav__link">الأمن السيبراني</a>
 <a href="#projects" class="nav__link">المشاريع</a>
-<a href="#achievements" class="nav__link">الإنجازات</a>
+<a href="#experience" class="nav__link">المسيرة</a>
 <a href="#education" class="nav__link">التعليم</a>
 <a href="#contact" class="nav__link">التواصل</a>
-<!-- زر العودة للإنجليزية -->
 <a href="index.html" class="nav__link" style="color: var(--accent); font-weight: bold;">English</a>
 </nav>
 <button class="nav__toggle" id="navToggle" aria-label="افتح القائمة" aria-expanded="false" aria-controls="navLinks">
@@ -104,7 +113,6 @@
 </p>
 <div class="hero__cta">
 <a href="#projects" class="btn btn--primary">عرض مشاريعي</a>
-<a href="#achievements" class="btn btn--ghost">عرض إنجازاتي</a>
 <a href="#contact" class="btn btn--ghost">تواصل معي</a>
 <a href="assets/cv/Mohsin-Al-Jaili-Ahmed-CV.pdf" class="btn btn--outline" download>تحميل السيرة الذاتية</a>
 </div>
@@ -130,26 +138,11 @@
 <p><span class="prompt">$</span> <span class="cursor-blink">▮</span></p>
 </div>
 </div>
-<svg class="net" viewBox="0 0 400 400" role="presentation">
-<g class="net__links" stroke="var(--accent)" stroke-width="1" opacity="0.35">
-<line x1="60" y1="70" x2="200" y2="150"></line>
-<line x1="200" y1="150" x2="330" y2="90"></line>
-<line x1="200" y1="150" x2="140" y2="280"></line>
-<line x1="200" y1="150" x2="320" y2="300"></line>
-<line x1="140" y1="280" x2="320" y2="300"></line>
-</g>
-<g class="net__nodes" fill="var(--accent)">
-<circle cx="60" cy="70" r="5"></circle>
-<circle cx="200" cy="150" r="7"></circle>
-<circle cx="330" cy="90" r="5"></circle>
-<circle cx="140" cy="280" r="5"></circle>
-<circle cx="320" cy="300" r="5"></circle>
-</g>
-</svg>
 </div>
 </div>
 </section>
-  <!-- ================= ABOUT ================= -->
+
+<!-- ================= ABOUT ================= -->
 <section class="section" id="about">
 <div class="section__inner">
 <p class="eyebrow">$ cat about.md</p>
@@ -213,31 +206,33 @@
 </div>
 </section>
 
-  <!-- ================= المشاريع ================= -->
-<section class="section section--alt" id="projects">
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
   <div class="section__inner">
     <p class="eyebrow">$ ls projects/</p>
     <h2 class="section__title">المشاريع</h2>
     <div class="projects__grid">
-
       <article class="project-card project-card--dashed">
         <div class="project-card__top">
           <h3>مشاريع تقنية المعلومات والأمن السيبراني</h3>
         </div>
         <p class="project-card__desc">مجموعة من المشاريع الأكاديمية والشخصية، تشمل تقارير تحديات (CTF)، وتجارب أمن الويب، بالإضافة إلى أنظمة الإدارة الذكية.</p>
+        <ul class="mini-list">
+          <li>مشروع نظام إدارة الطاقة الشمسية (IoT)</li>
+          <li>مشروع TechFlow</li>
+          <li>تجارب وتقارير أمن الويب واختبار الاختراق</li>
+        </ul>
         <a class="link-arrow" href="https://github.com/Senku0000" target="_blank" rel="noopener">تصفح المشاريع على GitHub ←</a>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ================= المسيرة التقنية ================= -->
-<section class="section" id="experience">
+<!-- ================= EXPERIENCE ================= -->
+<section class="section section--alt" id="experience">
   <div class="section__inner">
     <p class="eyebrow">$ cat timeline.log</p>
     <h2 class="section__title">المسيرة التقنية</h2>
-
     <ol class="timeline">
       <li class="timeline__item">
         <span class="timeline__dot"></span>
@@ -249,7 +244,7 @@
         <span class="timeline__dot"></span>
         <p class="timeline__date">2026</p>
         <h3>تعلم الأمن السيبراني — TryHackMe</h3>
-        <p>إكمال مسار Pre Security والتدرب العملي على اكتشاف الثغرات وتجربة أدوات مثل Burp Suite للوصول إلى أفضل 6%.</p>
+        <p>إكمال مسار Pre Security والتدرب العملي على اكتشاف الثغرات للوصول إلى أفضل 6%.</p>
       </li>
       <li class="timeline__item">
         <span class="timeline__dot"></span>
@@ -261,8 +256,8 @@
   </div>
 </section>
 
-<!-- ================= التعليم ================= -->
-<section class="section section--alt" id="education">
+<!-- ================= EDUCATION ================= -->
+<section class="section" id="education">
   <div class="section__inner">
     <p class="eyebrow">$ cat education.txt</p>
     <h2 class="section__title">التعليم</h2>
@@ -274,9 +269,8 @@
   </div>
 </section>
 
-
 <!-- ================= STATS ================= -->
-<section class="section stats" id="stats">
+<section class="section stats section--alt" id="stats">
 <div class="section__inner">
 <div class="stats__grid">
 <div class="stat-block">
@@ -284,7 +278,7 @@
 <p class="stat-block__label">TryHackMe منصة</p>
 </div>
 <div class="stat-block">
-<p class="stat-block__num" data-count-text="#27/467">#27 / 467</p>
+<p class="stat-block__num" data-count-text="#27 / 467">#27 / 467</p>
 <p class="stat-block__label">البطولة العربية للسايبر 2022</p>
 </div>
 <div class="stat-block">
@@ -347,4 +341,3 @@
 <script src="js/script.js"></script>
 </body>
 </html>
-
