@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محسن الجيلي أحمد | طالب تقنية معلومات ومهتم بالأمن السيبراني</title>
+<meta name="description" content="محسن الجيلي أحمد — طالب تقنية معلومات متخصص في الأمن السيبراني، الشبكات، وتطوير البرمجيات.">
+<meta name="theme-color" content="#0a0e14">
+<link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- إضافة خط عربي أنيق (Tajawal) مع الخطوط الأجنبية -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- تعديل بسيط لخطوط النسخة العربية -->
+<style>
+  body, h1, h2, h3, p, a { font-family: 'Tajawal', 'Inter', sans-serif; }
+  .terminal__body, .nav__prompt { font-family: 'JetBrains Mono', monospace; direction: ltr; text-align: left; }
+  .contact-form { text-align: right; }
+</style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">تخطي إلى المحتوى</a>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+<div class="nav__inner">
+<a href="#home" class="nav__brand" aria-label="محسن الجيلي أحمد, الرئيسية">
+<span class="nav__prompt">~/</span>mohsin<span class="nav__cursor">_</span>
+</a>
+<nav class="nav__links" id="navLinks" aria-label="Primary">
+<a href="#home" class="nav__link active">الرئيسية</a>
+<a href="#about" class="nav__link">نبذة عني</a>
+<a href="#skills" class="nav__link">المهارات</a>
+<a href="#cybersecurity" class="nav__link">الأمن السيبراني</a>
+<a href="#projects" class="nav__link">المشاريع</a>
+<a href="#achievements" class="nav__link">الإنجازات</a>
+<a href="#education" class="nav__link">التعليم</a>
+<a href="#contact" class="nav__link">التواصل</a>
+<!-- زر العودة للإنجليزية -->
+<a href="index.html" class="nav__link" style="color: var(--accent); font-weight: bold;">English</a>
+</nav>
+<button class="nav__toggle" id="navToggle" aria-label="افتح القائمة" aria-expanded="false" aria-controls="navLinks">
+<span></span><span></span><span></span>
+</button>
+</div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+<div class="hero__grid">
+<div class="hero__content">
+<p class="eyebrow">$ whoami</p>
+<h1 class="hero__title">
+مرحباً، أنا <span class="text-accent">محسن</span>.<br>
+طالب تقنية معلومات<br>
+ومهتم بالأمن السيبراني
+</h1>
+<p class="hero__desc">
+أدرس تقنية المعلومات في جامعة السودان للعلوم والتكنولوجيا، مع تركيز على الأمن السيبراني، الشبكات، وتطوير البرمجيات. أقوم ببناء أدوات عملية، وأتدرب من خلال مختبرات الحماية، وأستمتع بفهم كيفية عمل الأنظمة من الداخل.
+</p>
+<div class="hero__cta">
+<a href="#projects" class="btn btn--primary">عرض مشاريعي</a>
+<a href="#achievements" class="btn btn--ghost">عرض إنجازاتي</a>
+<a href="#contact" class="btn btn--ghost">تواصل معي</a>
+<a href="assets/cv/Mohsin-Al-Jaili-Ahmed-CV.pdf" class="btn btn--outline" download>تحميل السيرة الذاتية</a>
+</div>
+<div class="hero__stats">
+<div class="hero__stat"><span class="hero__stat-num">أفضل 6%</span><span class="hero__stat-label">TryHackMe</span></div>
+<div class="hero__stat"><span class="hero__stat-num">#27 / 467</span><span class="hero__stat-label">البطولة العربية للسايبر 2022</span></div>
+<div class="hero__stat"><span class="hero__stat-num">Pre Security</span><span class="hero__stat-label">إتمام مسار</span></div>
+</div>
+</div>
+<div class="hero__visual" aria-hidden="true">
+<div class="terminal">
+<div class="terminal__bar">
+<span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+<span class="terminal__title">mohsin@sust: ~</span>
+</div>
+<div class="terminal__body" id="terminalBody">
+<p><span class="prompt">$</span> <span class="type-line" data-text="whoami"></span></p>
+<p class="out">mohsin-al-jaili-ahmed</p>
+<p><span class="prompt">$</span> <span class="type-line" data-text="cat focus.txt"></span></p>
+<p class="out">cybersecurity · networking · python · web dev</p>
+<p><span class="prompt">$</span> <span class="type-line" data-text="scan --status"></span></p>
+<p class="out out--accent">learning ▓▓▓▓▓▓▓▓▓░ in progress</p>
+<p><span class="prompt">$</span> <span class="cursor-blink">▮</span></p>
+</div>
+</div>
+<svg class="net" viewBox="0 0 400 400" role="presentation">
+<g class="net__links" stroke="var(--accent)" stroke-width="1" opacity="0.35">
+<line x1="60" y1="70" x2="200" y2="150"></line>
+<line x1="200" y1="150" x2="330" y2="90"></line>
+<line x1="200" y1="150" x2="140" y2="280"></line>
+<line x1="200" y1="150" x2="320" y2="300"></line>
+<line x1="140" y1="280" x2="320" y2="300"></line>
+</g>
+<g class="net__nodes" fill="var(--accent)">
+<circle cx="60" cy="70" r="5"></circle>
+<circle cx="200" cy="150" r="7"></circle>
+<circle cx="330" cy="90" r="5"></circle>
+<circle cx="140" cy="280" r="5"></circle>
+<circle cx="320" cy="300" r="5"></circle>
+</g>
+</svg>
+</div>
+</div>
+</section>
